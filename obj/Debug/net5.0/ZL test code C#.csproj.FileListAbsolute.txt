@@ -1,0 +1,15 @@
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/obj/Debug/net5.0/ZL test code C#.csprojAssemblyReference.cache
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/obj/Debug/net5.0/ZL test code C#.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/obj/Debug/net5.0/ZL test code C#.AssemblyInfoInputs.cache
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/obj/Debug/net5.0/ZL test code C#.AssemblyInfo.cs
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/obj/Debug/net5.0/ZL test code C#.csproj.CoreCompileInputs.cache
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/bin/Debug/net5.0/ZL test code C#.deps.json
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/bin/Debug/net5.0/ZL test code C#.runtimeconfig.json
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/bin/Debug/net5.0/ZL test code C#.runtimeconfig.dev.json
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/bin/Debug/net5.0/ZL test code C#.dll
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/bin/Debug/net5.0/ref/ZL test code C#.dll
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/bin/Debug/net5.0/ZL test code C#.pdb
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/obj/Debug/net5.0/ZL test code C#.dll
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/obj/Debug/net5.0/ref/ZL test code C#.dll
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/obj/Debug/net5.0/ZL test code C#.pdb
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/obj/Debug/net5.0/ZL test code C#.genruntimeconfig.cache
