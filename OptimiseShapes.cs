@@ -21,6 +21,7 @@ namespace OptimiseShapes
     {
         private float Breadth;
         private float Height;
+        
         private float Sizes;
         private float Rad;
         private float TriangleArea;
