@@ -1,11 +1,3 @@
-// Implement an object hierarchy which contains at least classes for a rectangle, a triangle, and a circle.
-// implement a function float SumArea() that will iterate over an n-sized container of these shapes and sum their area
-// also implement functions void AddTriangle (float b, float h), void AddSquare(float size), void AddCircle(float radius)
-
-// Note 1: You need only write a single function for each class (plus the constructor).
-// Note 2: The total sum of areas is required, regardless if the shapes overlap.
-// Note 3: Try to make the iteration code as optimal as possible
-
 using System;
 using System.IO;
 using System.Linq;
