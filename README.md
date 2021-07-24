@@ -1,4 +1,4 @@
-#Optimise area with shapes#
+Optimise area with shapes
 
 C# code using a class containing functions square, triangle and circle.
 
