@@ -10,51 +10,49 @@ namespace OptimiseShapes
      {
          static void Main (string[] args)
          {
-             Answer a = new Answer();
-             a.AddTriangle(3.0f, 2.5f);
-             a.AddCircle(3.0f);
-             a.AddSquare(4.876f);
-             Console.WriteLine(a.SumArea());
+             Answer a = new Answer(3.0f, 2.5f, 3.0f, 2.5f, 3.0f);
+             Console.WriteLine("Total area of shapes to match with container: " + a.SumArea());
          }
      }
     public class Answer
     {
-        private float Breadth;
-        private float Height;
-        
-        private float Sizes;
+        private float TriangleBreadth;
+        private float TriangleHeight;
+        private float SquareBreadth;
+        private float SquareHeight; 
         private float Rad;
         private float TriangleArea;
         private float CircleArea;
-        public Answer(float b=2.0f, float h=2.0f, float size=2.0f, float radius=2.0f)
+        private float SquareArea;
+        public Answer(float Tb=2.0f, float Th=2.0f, float Sb=2.0f, float Sh = 2.0f, float radius=2.0f)
         {
-            Breadth = b;
-            Height = h;
-            Sizes = size;
+            TriangleBreadth = Tb;
+            TriangleHeight = Th;
+            SquareBreadth = Sb;
+            SquareHeight = Sh;
             Rad = radius;
         }
 
         // getters and setters
-        public float BreadthGetSet 
+        public float TriangleBreadthGetSet 
         { 
-            get {return this.Breadth;}
-            set {this.Breadth = value;}
+            get {return this.TriangleBreadth;}
         }
-        public float HeightGetSet 
+        public float TriangleHeightGetSet 
         { 
-            get {return this.Height;} 
-            set {this.Height = value;}
+            get {return this.TriangleHeight;} 
         }
-        
-        public float SizesGetSet 
-        {
-            get { return this.Sizes;}
-            set {this.Sizes = value;}
+        public float SquareBreadthGetSet 
+        { 
+            get {return this.SquareBreadth;}
+        }
+        public float SquareHeightGetSet 
+        { 
+            get {return this.SquareHeight;} 
         }
         public float RadGetSet 
         {
             get { return this.Rad;}
-            set {this.Rad = value;}
         }
         public float TriangleAreaGetSet 
         {
@@ -66,40 +64,33 @@ namespace OptimiseShapes
             get { return this.CircleArea;}
             set {this.CircleArea = value;}
         }
+        public float SquareAreaGetSet 
+        {
+            get { return this.SquareArea;}
+            set {this.SquareArea = value;}
+        }
 
         // Functions
-        public void AddTriangle(float b=0.0f, float h=0.0f)
+        public void AddTriangle()
         {
-            if(b>0.0f & h>0.0f){
-                BreadthGetSet = b;
-                HeightGetSet = h;
-                TriangleAreaGetSet = this.BreadthGetSet*this.HeightGetSet;
-                Console.WriteLine("Triangle "+TriangleAreaGetSet);
-            } else {
-                TriangleAreaGetSet = this.BreadthGetSet*this.HeightGetSet;
-                Console.WriteLine("Triangle "+TriangleAreaGetSet);
-            }
+            
+            this.TriangleAreaGetSet = 0.5f*this.TriangleBreadthGetSet*this.TriangleHeightGetSet;
+            Console.WriteLine("Triangle: "+TriangleAreaGetSet);
+        
         }
 
-        public void AddSquare(float size=0.0f)
+        public void AddSquare()
         {
-            if(size>0.0f)
-            {
-                SizesGetSet = size;
-                Console.WriteLine("Square "+SizesGetSet);
-            } 
+         
+            this.SquareAreaGetSet = this.SquareBreadthGetSet*this.SquareHeightGetSet;
+            Console.WriteLine("Square: "+SquareAreaGetSet);
+       
         }
-        public void AddCircle(float radius=0.0f)
+        public void AddCircle()
         {
-            float pi = MathF.PI;
-            if(radius>0.0f){
-                RadGetSet = radius;
-                CircleAreaGetSet = pi*this.Rad*this.Rad;
-                Console.WriteLine("Circle "+CircleAreaGetSet);
-            } else {
-                CircleAreaGetSet = pi*this.Rad*this.Rad;
-                Console.WriteLine("Circle "+CircleAreaGetSet);
-            }
+            float pi = MathF.PI;    
+            CircleAreaGetSet = pi*this.Rad*this.Rad;
+            Console.WriteLine("Circle: "+CircleAreaGetSet);
         }
 
         public float SumArea()
@@ -109,13 +100,17 @@ namespace OptimiseShapes
             int numOfSquareShapes = 0;
             float containerArea = 124.7680f;
             float areaLeft = 0.0f;
-            
+
+            AddTriangle();
+            AddSquare();
+            AddCircle();
+
             // set as dictionary to iterate values and count number for each shape used to optimise containerArea
             var dictShapes = new Dictionary<string, float>()
             {
                 {"Triangle", TriangleAreaGetSet},
                 {"Circle", CircleAreaGetSet},
-                {"Square", SizesGetSet}
+                {"Square", SquareAreaGetSet}
             };
 
             //use sort to start with highest
@@ -126,7 +121,6 @@ namespace OptimiseShapes
                 { 
                         while(shape.Value < tempVal)
                         {
-                            Console.WriteLine("tempVal: "+tempVal);
                             areaLeft += shape.Value;
                             tempVal -= shape.Value;
                             if(shape.Key == "Triangle") {
@@ -140,11 +134,12 @@ namespace OptimiseShapes
                             }
                         } 
                 }
-
+            
             // write to console number of each shapes used to match for optimum area to match with given containerArea
             Console.WriteLine("Number of triangles: "+numOfTriangleShapes);
             Console.WriteLine("Number of circles: "+numOfCircleShapes);
             Console.WriteLine("Number of squares: "+numOfSquareShapes);
+            Console.WriteLine("Size of container: "+containerArea);
 
             return areaLeft;
         }

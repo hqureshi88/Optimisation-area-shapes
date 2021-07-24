@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/ZL test code C#.csproj",
-      "projectName": "ZL test code C#",
-      "projectPath": "/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/ZL test code C#.csproj",
+      "projectUniqueName": "/Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/code C#.csproj",
+      "projectName": "code C#",
+      "projectPath": "/Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/code C#.csproj",
       "packagesPath": "/Users/hamidqureshi/.nuget/packages/",
-      "outputPath": "/Users/hamidqureshi/Documents/Codeacademy Projects folder/ZL test code C#/obj/",
+      "outputPath": "/Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/hamidqureshi/.nuget/NuGet/NuGet.Config"
