@@ -4,7 +4,6 @@
 /Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/bin/Debug/net5.0/code C#.dll
 /Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/bin/Debug/net5.0/ref/code C#.dll
 /Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/bin/Debug/net5.0/code C#.pdb
-/Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/obj/Debug/net5.0/code C#.csprojAssemblyReference.cache
 /Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/obj/Debug/net5.0/code C#.GeneratedMSBuildEditorConfig.editorconfig
 /Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/obj/Debug/net5.0/code C#.AssemblyInfoInputs.cache
 /Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/obj/Debug/net5.0/code C#.AssemblyInfo.cs
@@ -13,3 +12,4 @@
 /Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/obj/Debug/net5.0/ref/code C#.dll
 /Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/obj/Debug/net5.0/code C#.pdb
 /Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/obj/Debug/net5.0/code C#.genruntimeconfig.cache
+/Users/hamidqureshi/Documents/Codeacademy Projects folder/code C#/obj/Debug/net5.0/code C#.csproj.AssemblyReference.cache

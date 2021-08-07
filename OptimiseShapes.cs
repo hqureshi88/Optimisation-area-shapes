@@ -16,58 +16,58 @@ namespace OptimiseShapes
      }
     public class Answer
     {
-        private float TriangleBreadth;
-        private float TriangleHeight;
-        private float SquareBreadth;
-        private float SquareHeight; 
-        private float Rad;
-        private float TriangleArea;
-        private float CircleArea;
-        private float SquareArea;
+        private float _triangleBreadth;
+        private float _triangleHeight;
+        private float _squareBreadth;
+        private float _squareHeight; 
+        private float _rad;
+        private float _triangleArea;
+        private float _circleArea;
+        private float _squareArea;
         public Answer(float Tb=2.0f, float Th=2.0f, float Sb=2.0f, float Sh = 2.0f, float radius=2.0f)
         {
-            TriangleBreadth = Tb;
-            TriangleHeight = Th;
-            SquareBreadth = Sb;
-            SquareHeight = Sh;
-            Rad = radius;
+            _triangleBreadth = Tb;
+            _triangleHeight = Th;
+            _squareBreadth = Sb;
+            _squareHeight = Sh;
+            _rad = radius;
         }
 
         // getters and setters
         public float TriangleBreadthGetSet 
         { 
-            get {return this.TriangleBreadth;}
+            get {return _triangleBreadth;}
         }
         public float TriangleHeightGetSet 
         { 
-            get {return this.TriangleHeight;} 
+            get {return _triangleHeight;} 
         }
         public float SquareBreadthGetSet 
         { 
-            get {return this.SquareBreadth;}
+            get {return _squareBreadth;}
         }
         public float SquareHeightGetSet 
         { 
-            get {return this.SquareHeight;} 
+            get {return _squareHeight;} 
         }
         public float RadGetSet 
         {
-            get { return this.Rad;}
+            get { return _rad;}
         }
         public float TriangleAreaGetSet 
         {
-            get { return this.TriangleArea;}
-            set {this.TriangleArea = value;}
+            get { return _triangleArea;}
+            set {_triangleArea = value;}
         }
         public float CircleAreaGetSet 
         {
-            get { return this.CircleArea;}
-            set {this.CircleArea = value;}
+            get { return _circleArea;}
+            set {_circleArea = value;}
         }
         public float SquareAreaGetSet 
         {
-            get { return this.SquareArea;}
-            set {this.SquareArea = value;}
+            get { return _squareArea;}
+            set {_squareArea = value;}
         }
 
         // Functions
@@ -75,7 +75,7 @@ namespace OptimiseShapes
         {
             
             this.TriangleAreaGetSet = 0.5f*this.TriangleBreadthGetSet*this.TriangleHeightGetSet;
-            Console.WriteLine("Triangle: "+TriangleAreaGetSet);
+            Console.WriteLine("Triangle: "+this.TriangleAreaGetSet);
         
         }
 
@@ -83,14 +83,14 @@ namespace OptimiseShapes
         {
          
             this.SquareAreaGetSet = this.SquareBreadthGetSet*this.SquareHeightGetSet;
-            Console.WriteLine("Square: "+SquareAreaGetSet);
+            Console.WriteLine("Square: "+this.SquareAreaGetSet);
        
         }
         public void AddCircle()
         {
             float pi = MathF.PI;    
-            CircleAreaGetSet = pi*this.Rad*this.Rad;
-            Console.WriteLine("Circle: "+CircleAreaGetSet);
+            this.CircleAreaGetSet = pi*this.RadGetSet*this.RadGetSet;
+            Console.WriteLine("Circle: "+this.CircleAreaGetSet);
         }
 
         public float SumArea()
@@ -108,9 +108,9 @@ namespace OptimiseShapes
             // set as dictionary to iterate values and count number for each shape used to optimise containerArea
             var dictShapes = new Dictionary<string, float>()
             {
-                {"Triangle", TriangleAreaGetSet},
-                {"Circle", CircleAreaGetSet},
-                {"Square", SquareAreaGetSet}
+                {"Triangle", this.TriangleAreaGetSet},
+                {"Circle", this.CircleAreaGetSet},
+                {"Square", this.SquareAreaGetSet}
             };
 
             //use sort to start with highest
