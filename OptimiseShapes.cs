@@ -96,7 +96,7 @@ namespace OptimiseShapes
             int numOfCircleShapes = 0;
             int numOfSquareShapes = 0;
             float containerArea = 155.7680f;
-            float areaLeft = 0.0f;
+            float optimalArea = 0.0f;
 
             AddTriangle();
             AddSquare();
@@ -118,7 +118,7 @@ namespace OptimiseShapes
                 { 
                         while(shape.Value < tempVal)
                         {
-                            areaLeft += shape.Value;
+                            optimalArea += shape.Value;
                             tempVal -= shape.Value;
                             if(shape.Key == "Triangle") {
                                 numOfTriangleShapes += 1;
@@ -138,7 +138,7 @@ namespace OptimiseShapes
             Console.WriteLine("Number of squares: "+numOfSquareShapes);
             Console.WriteLine("Size of container: "+containerArea);
 
-            return areaLeft;
+            return optimalArea;
         }
     }
 
