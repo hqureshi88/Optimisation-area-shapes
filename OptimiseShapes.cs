@@ -33,62 +33,60 @@ namespace OptimiseShapes
         }
 
         // getters and setters
-        public float TriangleBreadthGetSet 
+        public float TriangleBreadthGet 
         { 
             get {return _triangleBreadth;}
         }
-        public float TriangleHeightGetSet 
+        public float TriangleHeightGet 
         { 
             get {return _triangleHeight;} 
         }
-        public float SquareBreadthGetSet 
+        public float SquareBreadthGet 
         { 
             get {return _squareBreadth;}
         }
-        public float SquareHeightGetSet 
+        public float SquareHeightGet 
         { 
             get {return _squareHeight;} 
         }
-        public float RadGetSet 
+        public float RadGet 
         {
             get { return _rad;}
         }
         public float TriangleAreaGetSet 
         {
             get { return _triangleArea;}
-            set {_triangleArea = value;}
+            private set {_triangleArea = value;}
         }
         public float CircleAreaGetSet 
         {
             get { return _circleArea;}
-            set {_circleArea = value;}
+            private set {_circleArea = value;}
         }
         public float SquareAreaGetSet 
         {
             get { return _squareArea;}
-            set {_squareArea = value;}
+            private set {_squareArea = value;}
         }
 
         // Functions
         public void AddTriangle()
         {
             
-            this.TriangleAreaGetSet = 0.5f*this.TriangleBreadthGetSet*this.TriangleHeightGetSet;
+            this.TriangleAreaGetSet = 0.5f*this.TriangleBreadthGet*this.TriangleHeightGet;
             Console.WriteLine("Triangle: "+this.TriangleAreaGetSet);
         
         }
-
         public void AddSquare()
-        {
-         
-            this.SquareAreaGetSet = this.SquareBreadthGetSet*this.SquareHeightGetSet;
+        {         
+            this.SquareAreaGetSet = this.SquareBreadthGet*this.SquareHeightGet;
             Console.WriteLine("Square: "+this.SquareAreaGetSet);
        
         }
         public void AddCircle()
         {
             float pi = MathF.PI;    
-            this.CircleAreaGetSet = pi*this.RadGetSet*this.RadGetSet;
+            this.CircleAreaGetSet = pi*(float)Math.Pow(this.RadGet, 2);
             Console.WriteLine("Circle: "+this.CircleAreaGetSet);
         }
 
@@ -97,7 +95,7 @@ namespace OptimiseShapes
             int numOfTriangleShapes = 0;
             int numOfCircleShapes = 0;
             int numOfSquareShapes = 0;
-            float containerArea = 124.7680f;
+            float containerArea = 155.7680f;
             float areaLeft = 0.0f;
 
             AddTriangle();
@@ -113,7 +111,7 @@ namespace OptimiseShapes
             };
 
             //use sort to start with highest
-            var sortByDescending = from entry in dictShapes orderby entry.Value descending select entry;
+            var sortByDescending = from shape in dictShapes orderby shape.Value descending select shape;
 
                 float tempVal = containerArea;
                 foreach (KeyValuePair<string, float> shape in sortByDescending)
